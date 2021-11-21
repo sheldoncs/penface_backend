@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Payroll.master.cs" Inherits="PSWebApp.Payroll1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Payroll</title>
+
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
+    <link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" type="text/javascript" /> 
+	<link href="css/jquery.mobile.datepicker.css" rel="stylesheet" type="text/css" />
+	<link href="css/jquery.mobile.datepicker.theme.css" rel="stylesheet" type="text/css" />
+   
+    <link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+    <link href="css/buttonstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="themes/buttonTheme.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+     
+    <script src="Scripts/external/datepicker.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/mobile/git/jquery.mobile-git.js" type="text/javascript"></script> 
+	<script src="Scripts/jquery.mobile.datepicker.js" type="text/javascript"></script>
+    <link href="css/newicons.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" href="dist/jqm-icon-pack-fa.css" />
+    <script src="Scripts/sweetalert.min.js" type="text/javascript"></script>
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="box">
+
+       <asp:ScriptManager ID="ScriptManager1" runat="server"> 
+        <Services>
+            <asp:ServiceReference Path="~/Payroll.asmx" />
+        </Services>
+       </asp:ScriptManager>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+       
+
+
+    </div>
+    </form>
+</body>
+</html>

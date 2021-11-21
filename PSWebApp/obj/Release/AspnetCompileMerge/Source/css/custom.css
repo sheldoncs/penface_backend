@@ -1,0 +1,6 @@
+﻿
+.ui-icon-myapp-settings {
+	       background    : url("images/button/icons-small/settings@2x.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	       background-size: 18px 18px !important;
+	       position:relative;
+}

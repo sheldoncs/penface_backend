@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{546E2354-E5FC-4099-A32C-1F5B864917B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSWebApp</RootNamespace>
+    <AssemblyName>PSWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Users\20003569\Desktop\AD Students\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="css\buttonstyle.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\jquery.mobile-1.4.5.css" />
+    <Content Include="css\jquery.mobile.datepicker.css" />
+    <Content Include="css\jquery.mobile.datepicker.theme.css" />
+    <Content Include="css\newicons.css" />
+    <Content Include="css\sheet.css" />
+    <Content Include="css\Style.css" />
+    <Content Include="css\sweetalert.css" />
+    <Content Include="dist\jqm-icon-pack-fa-builder.css" />
+    <Content Include="dist\jqm-icon-pack-fa.css" />
+    <Content Include="dist\png\00.png" />
+    <Content Include="dist\png\01.png" />
+    <Content Include="dist\png\02.png" />
+    <Content Include="dist\png\03.png" />
+    <Content Include="dist\png\04.png" />
+    <Content Include="dist\png\05.png" />
+    <Content Include="dist\png\06.png" />
+    <Content Include="dist\png\07.png" />
+    <Content Include="dist\png\08.png" />
+    <Content Include="dist\png\09.png" />
+    <Content Include="dist\png\adjust.png" />
+    <Content Include="dist\png\adn.png" />
+    <Content Include="dist\png\align-center.png" />
+    <Content Include="dist\png\align-justify.png" />
+    <Content Include="dist\png\align-left.png" />
+    <Content Include="dist\png\align-right.png" />
+    <Content Include="dist\png\ambulance.png" />
+    <Content Include="dist\png\anchor.png" />
+    <Content Include="dist\png\android.png" />
+    <Content Include="dist\png\angle-double-down.png" />
+    <Content Include="dist\png\angle-double-left.png" />
+    <Content Include="dist\png\angle-double-right.png" />
+    <Content Include="dist\png\angle-double-up.png" />
+    <Content Include="dist\png\angle-down.png" />
+    <Content Include="dist\png\angle-left.png" />
+    <Content Include="dist\png\angle-right.png" />
+    <Content Include="dist\png\angle-up.png" />
+    <Content Include="dist\png\apple.png" />
+    <Content Include="dist\png\archive.png" />
+    <Content Include="dist\png\arrow-circle-down.png" />
+    <Content Include="dist\png\arrow-circle-left.png" />
+    <Content Include="dist\png\arrow-circle-o-down.png" />
+    <Content Include="dist\png\arrow-circle-o-left.png" />
+    <Content Include="dist\png\arrow-circle-o-right.png" />
+    <Content Include="dist\png\arrow-circle-o-up.png" />
+    <Content Include="dist\png\arrow-circle-right.png" />
+    <Content Include="dist\png\arrow-circle-up.png" />
+    <Content Include="dist\png\arrow-down.png" />
+    <Content Include="dist\png\arrow-left.png" />
+    <Content Include="dist\png\arrow-right.png" />
+    <Content Include="dist\png\arrow-up.png" />
+    <Content Include="dist\png\arrows-alt.png" />
+    <Content Include="dist\png\arrows-h.png" />
+    <Content Include="dist\png\arrows-v.png" />
+    <Content Include="dist\png\arrows.png" />
+    <Content Include="dist\png\asterisk.png" />
+    <Content Include="dist\png\backward.png" />
+    <Content Include="dist\png\ban.png" />
+    <Content Include="dist\png\bar-chart-o.png" />
+    <Content Include="dist\png\barcode.png" />
+    <Content Include="dist\png\bars.png" />
+    <Content Include="dist\png\beer.png" />
+    <Content Include="dist\png\bell-o.png" />
+    <Content Include="dist\png\bell.png" />
+    <Content Include="dist\png\bitbucket-square.png" />
+    <Content Include="dist\png\bitbucket.png" />
+    <Content Include="dist\png\bitcoin.png" />
+    <Content Include="dist\png\bold.png" />
+    <Content Include="dist\png\bolt.png" />
+    <Content Include="dist\png\book.png" />
+    <Content Include="dist\png\bookmark-o.png" />
+    <Content Include="dist\png\bookmark.png" />
+    <Content Include="dist\png\briefcase.png" />
+    <Content Include="dist\png\bug.png" />
+    <Content Include="dist\png\building-o.png" />
+    <Content Include="dist\png\bullhorn.png" />
+    <Content Include="dist\png\bullseye.png" />
+    <Content Include="dist\png\calendar-o.png" />
+    <Content Include="dist\png\calendar.png" />
+    <Content Include="dist\png\camera-retro.png" />
+    <Content Include="dist\png\camera.png" />
+    <Content Include="dist\png\caret-down.png" />
+    <Content Include="dist\png\caret-left.png" />
+    <Content Include="dist\png\caret-right.png" />
+    <Content Include="dist\png\caret-up.png" />
+    <Content Include="dist\png\certificate.png" />
+    <Content Include="dist\png\check-circle-o.png" />
+    <Content Include="dist\png\check-circle.png" />
+    <Content Include="dist\png\check-square-o.png" />
+    <Content Include="dist\png\check-square.png" />
+    <Content Include="dist\png\check.png" />
+    <Content Include="dist\png\chevron-circle-down.png" />
+    <Content Include="dist\png\chevron-circle-left.png" />
+    <Content Include="dist\png\chevron-circle-right.png" />
+    <Content Include="dist\png\chevron-circle-up.png" />
+    <Content Include="dist\png\chevron-down.png" />
+    <Content Include="dist\png\chevron-left.png" />
+    <Content Include="dist\png\chevron-right.png" />
+    <Content Include="dist\png\chevron-up.png" />
+    <Content Include="dist\png\circle-o.png" />
+    <Content Include="dist\png\circle.png" />
+    <Content Include="dist\png\clipboard.png" />
+    <Content Include="dist\png\clock-o.png" />
+    <Content Include="dist\png\cloud-download.png" />
+    <Content Include="dist\png\cloud-upload.png" />
+    <Content Include="dist\png\cloud.png" />
+    <Content Include="dist\png\code-fork.png" />
+    <Content Include="dist\png\code.png" />
+    <Content Include="dist\png\coffee.png" />
+    <Content Include="dist\png\columns.png" />
+    <Content Include="dist\png\comment-o.png" />
+    <Content Include="dist\png\comment.png" />
+    <Content Include="dist\png\comments-o.png" />
+    <Content Include="dist\png\comments.png" />
+    <Content Include="dist\png\compass.png" />
+    <Content Include="dist\png\compress.png" />
+    <Content Include="dist\png\credit-card.png" />
+    <Content Include="dist\png\crop.png" />
+    <Content Include="dist\png\crosshairs.png" />
+    <Content Include="dist\png\css3.png" />
+    <Content Include="dist\png\cutlery.png" />
+    <Content Include="dist\png\dashboard.png" />
+    <Content Include="dist\png\dedent.png" />
+    <Content Include="dist\png\desktop.png" />
+    <Content Include="dist\png\dot-circle-o.png" />
+    <Content Include="dist\png\download.png" />
+    <Content Include="dist\png\dribbble.png" />
+    <Content Include="dist\png\dropbox.png" />
+    <Content Include="dist\png\edit.png" />
+    <Content Include="dist\png\eject.png" />
+    <Content Include="dist\png\ellipsis-h.png" />
+    <Content Include="dist\png\ellipsis-v.png" />
+    <Content Include="dist\png\envelope-o.png" />
+    <Content Include="dist\png\envelope.png" />
+    <Content Include="dist\png\eraser.png" />
+    <Content Include="dist\png\euro.png" />
+    <Content Include="dist\png\exchange.png" />
+    <Content Include="dist\png\exclamation-circle.png" />
+    <Content Include="dist\png\exclamation-triangle.png" />
+    <Content Include="dist\png\exclamation.png" />
+    <Content Include="dist\png\expand.png" />
+    <Content Include="dist\png\external-link-square.png" />
+    <Content Include="dist\png\external-link.png" />
+    <Content Include="dist\png\external-link3.png" />
+    <Content Include="dist\png\eye-slash.png" />
+    <Content Include="dist\png\eye.png" />
+    <Content Include="dist\png\facebook-square.png" />
+    <Content Include="dist\png\facebook.png" />
+    <Content Include="dist\png\facebook3.png" />
+    <Content Include="dist\png\fast-backward.png" />
+    <Content Include="dist\png\fast-forward.png" />
+    <Content Include="dist\png\female.png" />
+    <Content Include="dist\png\fighter-jet.png" />
+    <Content Include="dist\png\file-o.png" />
+    <Content Include="dist\png\file-text-o.png" />
+    <Content Include="dist\png\file-text.png" />
+    <Content Include="dist\png\file.png" />
+    <Content Include="dist\png\files-o.png" />
+    <Content Include="dist\png\film.png" />
+    <Content Include="dist\png\filter.png" />
+    <Content Include="dist\png\fire-extinguisher.png" />
+    <Content Include="dist\png\fire.png" />
+    <Content Include="dist\png\flag-checkered.png" />
+    <Content Include="dist\png\flag-o.png" />
+    <Content Include="dist\png\flag.png" />
+    <Content Include="dist\png\flask.png" />
+    <Content Include="dist\png\flickr.png" />
+    <Content Include="dist\png\folder-o.png" />
+    <Content Include="dist\png\folder-open-o.png" />
+    <Content Include="dist\png\folder-open.png" />
+    <Content Include="dist\png\folder.png" />
+    <Content Include="dist\png\font.png" />
+    <Content Include="dist\png\forward.png" />
+    <Content Include="dist\png\foursquare.png" />
+    <Content Include="dist\png\frown-o.png" />
+    <Content Include="dist\png\gamepad.png" />
+    <Content Include="dist\png\gavel.png" />
+    <Content Include="dist\png\gbp.png" />
+    <Content Include="dist\png\gear.png" />
+    <Content Include="dist\png\gears.png" />
+    <Content Include="dist\png\gift.png" />
+    <Content Include="dist\png\github-alt.png" />
+    <Content Include="dist\png\github-square.png" />
+    <Content Include="dist\png\github.png" />
+    <Content Include="dist\png\gittip.png" />
+    <Content Include="dist\png\glass.png" />
+    <Content Include="dist\png\globe.png" />
+    <Content Include="dist\png\globe3.png" />
+    <Content Include="dist\png\google-plus-square.png" />
+    <Content Include="dist\png\google-plus.png" />
+    <Content Include="dist\png\group.png" />
+    <Content Include="dist\png\h-square.png" />
+    <Content Include="dist\png\hand-o-down.png" />
+    <Content Include="dist\png\hand-o-left.png" />
+    <Content Include="dist\png\hand-o-right.png" />
+    <Content Include="dist\png\hand-o-up.png" />
+    <Content Include="dist\png\hdd-o.png" />
+    <Content Include="dist\png\headphones.png" />
+    <Content Include="dist\png\heart-o.png" />
+    <Content Include="dist\png\heart.png" />
+    <Content Include="dist\png\home.png" />
+    <Content Include="dist\png\hospital-o.png" />
+    <Content Include="dist\png\html5.png" />
+    <Content Include="dist\png\i00.png" />
+    <Content Include="dist\png\i01.png" />
+    <Content Include="dist\png\i02.png" />
+    <Content Include="dist\png\i03.png" />
+    <Content Include="dist\png\i04.png" />
+    <Content Include="dist\png\i05.png" />
+    <Content Include="dist\png\i06.png" />
+    <Content Include="dist\png\i07.png" />
+    <Content Include="dist\png\i08.png" />
+    <Content Include="dist\png\i09.png" />
+    <Content Include="dist\png\inbox.png" />
+    <Content Include="dist\png\indent.png" />
+    <Content Include="dist\png\info-circle.png" />
+    <Content Include="dist\png\info.png" />
+    <Content Include="dist\png\inr.png" />
+    <Content Include="dist\png\instagram.png" />
+    <Content Include="dist\png\italic.png" />
+    <Content Include="dist\png\jpy.png" />
+    <Content Include="dist\png\key.png" />
+    <Content Include="dist\png\keyboard-o.png" />
+    <Content Include="dist\png\krw.png" />
+    <Content Include="dist\png\laptop.png" />
+    <Content Include="dist\png\leaf.png" />
+    <Content Include="dist\png\lemon-o.png" />
+    <Content Include="dist\png\level-down.png" />
+    <Content Include="dist\png\level-up.png" />
+    <Content Include="dist\png\lightbulb-o.png" />
+    <Content Include="dist\png\link.png" />
+    <Content Include="dist\png\linkedin-square.png" />
+    <Content Include="dist\png\linkedin.png" />
+    <Content Include="dist\png\linux.png" />
+    <Content Include="dist\png\list-alt.png" />
+    <Content Include="dist\png\list-ol.png" />
+    <Content Include="dist\png\list-ul.png" />
+    <Content Include="dist\png\list.png" />
+    <Content Include="dist\png\location-arrow.png" />
+    <Content Include="dist\png\lock.png" />
+    <Content Include="dist\png\long-arrow-down.png" />
+    <Content Include="dist\png\long-arrow-left.png" />
+    <Content Include="dist\png\long-arrow-right.png" />
+    <Content Include="dist\png\long-arrow-up.png" />
+    <Content Include="dist\png\magic.png" />
+    <Content Include="dist\png\magnet.png" />
+    <Content Include="dist\png\mail-forward.png" />
+    <Content Include="dist\png\mail-reply-all.png" />
+    <Content Include="dist\png\mail-reply.png" />
+    <Content Include="dist\png\male.png" />
+    <Content Include="dist\png\map-marker.png" />
+    <Content Include="dist\png\maxcdn.png" />
+    <Content Include="dist\png\medkit.png" />
+    <Content Include="dist\png\meh-o.png" />
+    <Content Include="dist\png\microphone-slash.png" />
+    <Content Include="dist\png\microphone.png" />
+    <Content Include="dist\png\minus-circle.png" />
+    <Content Include="dist\png\minus-square-o.png" />
+    <Content Include="dist\png\minus-square.png" />
+    <Content Include="dist\png\minus.png" />
+    <Content Include="dist\png\mobile.png" />
+    <Content Include="dist\png\money.png" />
+    <Content Include="dist\png\moon-o.png" />
+    <Content Include="dist\png\music.png" />
+    <Content Include="dist\png\pagelines.png" />
+    <Content Include="dist\png\paperclip.png" />
+    <Content Include="dist\png\pause.png" />
+    <Content Include="dist\png\pencil-square.png" />
+    <Content Include="dist\png\pencil.png" />
+    <Content Include="dist\png\phone-square.png" />
+    <Content Include="dist\png\phone.png" />
+    <Content Include="dist\png\picture-o.png" />
+    <Content Include="dist\png\pinterest-square.png" />
+    <Content Include="dist\png\pinterest.png" />
+    <Content Include="dist\png\plane.png" />
+    <Content Include="dist\png\play-circle-o.png" />
+    <Content Include="dist\png\play-circle.png" />
+    <Content Include="dist\png\play.png" />
+    <Content Include="dist\png\plus-circle.png" />
+    <Content Include="dist\png\plus-square-o.png" />
+    <Content Include="dist\png\plus-square.png" />
+    <Content Include="dist\png\plus.png" />
+    <Content Include="dist\png\power-off.png" />
+    <Content Include="dist\png\print.png" />
+    <Content Include="dist\png\puzzle-piece.png" />
+    <Content Include="dist\png\qrcode.png" />
+    <Content Include="dist\png\question-circle.png" />
+    <Content Include="dist\png\question.png" />
+    <Content Include="dist\png\quote-left.png" />
+    <Content Include="dist\png\quote-right.png" />
+    <Content Include="dist\png\random.png" />
+    <Content Include="dist\png\refresh.png" />
+    <Content Include="dist\png\retweet.png" />
+    <Content Include="dist\png\road.png" />
+    <Content Include="dist\png\rocket.png" />
+    <Content Include="dist\png\rotate-right.png" />
+    <Content Include="dist\png\rss-square.png" />
+    <Content Include="dist\png\rss.png" />
+    <Content Include="dist\png\rub.png" />
+    <Content Include="dist\png\save.png" />
+    <Content Include="dist\png\scissors.png" />
+    <Content Include="dist\png\search-minus.png" />
+    <Content Include="dist\png\search-plus.png" />
+    <Content Include="dist\png\search.png" />
+    <Content Include="dist\png\share-square-o.png" />
+    <Content Include="dist\png\share-square.png" />
+    <Content Include="dist\png\shield.png" />
+    <Content Include="dist\png\shopping-cart.png" />
+    <Content Include="dist\png\sign-in.png" />
+    <Content Include="dist\png\sign-out.png" />
+    <Content Include="dist\png\signal.png" />
+    <Content Include="dist\png\sitemap.png" />
+    <Content Include="dist\png\skype.png" />
+    <Content Include="dist\png\smile-o.png" />
+    <Content Include="dist\png\sort-alpha-asc.png" />
+    <Content Include="dist\png\sort-alpha-desc.png" />
+    <Content Include="dist\png\sort-amount-asc.png" />
+    <Content Include="dist\png\sort-amount-desc.png" />
+    <Content Include="dist\png\sort-down.png" />
+    <Content Include="dist\png\sort-numeric-asc.png" />
+    <Content Include="dist\png\sort-numeric-desc.png" />
+    <Content Include="dist\png\sort-up.png" />
+    <Content Include="dist\png\sort.png" />
+    <Content Include="dist\png\spinner.png" />
+    <Content Include="dist\png\square-o.png" />
+    <Content Include="dist\png\square.png" />
+    <Content Include="dist\png\stack-exchange.png" />
+    <Content Include="dist\png\stack-overflow.png" />
+    <Content Include="dist\png\star-half-o.png" />
+    <Content Include="dist\png\star-half.png" />
+    <Content Include="dist\png\star-o.png" />
+    <Content Include="dist\png\star.png" />
+    <Content Include="dist\png\step-backward.png" />
+    <Content Include="dist\png\step-forward.png" />
+    <Content Include="dist\png\stethoscope.png" />
+    <Content Include="dist\png\stop.png" />
+    <Content Include="dist\png\strikethrough.png" />
+    <Content Include="dist\png\subscript.png" />
+    <Content Include="dist\png\suitcase.png" />
+    <Content Include="dist\png\sun-o.png" />
+    <Content Include="dist\png\superscript.png" />
+    <Content Include="dist\png\table.png" />
+    <Content Include="dist\png\tablet.png" />
+    <Content Include="dist\png\tag.png" />
+    <Content Include="dist\png\tags.png" />
+    <Content Include="dist\png\terminal.png" />
+    <Content Include="dist\png\text-height.png" />
+    <Content Include="dist\png\text-width.png" />
+    <Content Include="dist\png\th-large.png" />
+    <Content Include="dist\png\th-list.png" />
+    <Content Include="dist\png\th.png" />
+    <Content Include="dist\png\thumb-tack.png" />
+    <Content Include="dist\png\thumbs-o-down.png" />
+    <Content Include="dist\png\thumbs-o-up.png" />
+    <Content Include="dist\png\thumbs-thumb.png" />
+    <Content Include="dist\png\thumbs-up.png" />
+    <Content Include="dist\png\ticket.png" />
+    <Content Include="dist\png\times-circle-o.png" />
+    <Content Include="dist\png\times-circle.png" />
+    <Content Include="dist\png\times.png" />
+    <Content Include="dist\png\tint.png" />
+    <Content Include="dist\png\toggle-down.png" />
+    <Content Include="dist\png\toggle-left.png" />
+    <Content Include="dist\png\toggle-right.png" />
+    <Content Include="dist\png\toggle-up.png" />
+    <Content Include="dist\png\trash-o.png" />
+    <Content Include="dist\png\trello.png" />
+    <Content Include="dist\png\truck.png" />
+    <Content Include="dist\png\tumblr-square.png" />
+    <Content Include="dist\png\tumblr.png" />
+    <Content Include="dist\png\turkish-lira.png" />
+    <Content Include="dist\png\twitter-square.png" />
+    <Content Include="dist\png\twitter.png" />
+    <Content Include="dist\png\umbrella.png" />
+    <Content Include="dist\png\underline.png" />
+    <Content Include="dist\png\undo.png" />
+    <Content Include="dist\png\unlink.png" />
+    <Content Include="dist\png\unlock-alt.png" />
+    <Content Include="dist\png\upload.png" />
+    <Content Include="dist\png\usd.png" />
+    <Content Include="dist\png\user-md.png" />
+    <Content Include="dist\png\user.png" />
+    <Content Include="dist\png\video-camera.png" />
+    <Content Include="dist\png\vimeo-square.png" />
+    <Content Include="dist\png\vk.png" />
+    <Content Include="dist\png\vk3.png" />
+    <Content Include="dist\png\volume-down.png" />
+    <Content Include="dist\png\volume-off.png" />
+    <Content Include="dist\png\volume-up.png" />
+    <Content Include="dist\png\weibo.png" />
+    <Content Include="dist\png\wheelchair.png" />
+    <Content Include="dist\png\windows.png" />
+    <Content Include="dist\png\wrench.png" />
+    <Content Include="dist\png\xing-square.png" />
+    <Content Include="dist\png\xing.png" />
+    <Content Include="dist\png\youtube-play.png" />
+    <Content Include="dist\png\youtube-square.png" />
+    <Content Include="dist\png\youtube.png" />
+    <Content Include="images\button\icons-small\banner.png" />
+    <Content Include="images\button\icons-small\cr_union_export.png" />
+    <Content Include="images\button\icons-small\cr_union_import.png" />
+    <Content Include="images\button\icons-small\financial_details.png" />
+    <Content Include="images\button\icons-small\settings%402x.png" />
+    <Content Include="images\button\icons-small\spread_sheet.png" />
+    <Content Include="images\button\icons-small\super_ann.png" />
+    <Content Include="images\button\icons\banner.png" />
+    <Content Include="images\button\icons\credit_union.png" />
+    <Content Include="images\button\icons\cr_union_import.png" />
+    <Content Include="images\button\icons\fssu.png" />
+    <Content Include="images\button\icons\joiner.png" />
+    <Content Include="images\button\icons\nis_export.png" />
+    <Content Include="images\button\icons\penface.png" />
+    <Content Include="images\button\icons\study_travel.png" />
+    <Content Include="images\button\icons\super_ann.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\processing.jpg" />
+    <Content Include="images\wait.gif" />
+    <Content Include="index.aspx" />
+    <Content Include="Payroll.asmx" />
+    <Content Include="Scripts\external\datepicker.js" />
+    <Content Include="Scripts\external\jquery-ui\datepicker.js" />
+    <Content Include="Scripts\jquery.mobile-1.4.5.js" />
+    <Content Include="Scripts\jquery.mobile.datepicker.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="themes\buttonTheme.css" />
+    <Content Include="themes\buttonTheme.min.css" />
+    <Content Include="themes\images\ajax-loader.gif" />
+    <Content Include="themes\images\icons-png\action-black.png" />
+    <Content Include="themes\images\icons-png\action-white.png" />
+    <Content Include="themes\images\icons-png\alert-black.png" />
+    <Content Include="themes\images\icons-png\alert-white.png" />
+    <Content Include="themes\images\icons-png\arrow-d-black.png" />
+    <Content Include="themes\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="themes\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="themes\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="themes\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="themes\images\icons-png\arrow-d-white.png" />
+    <Content Include="themes\images\icons-png\arrow-l-black.png" />
+    <Content Include="themes\images\icons-png\arrow-l-white.png" />
+    <Content Include="themes\images\icons-png\arrow-r-black.png" />
+    <Content Include="themes\images\icons-png\arrow-r-white.png" />
+    <Content Include="themes\images\icons-png\arrow-u-black.png" />
+    <Content Include="themes\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="themes\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="themes\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="themes\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="themes\images\icons-png\arrow-u-white.png" />
+    <Content Include="themes\images\icons-png\audio-black.png" />
+    <Content Include="themes\images\icons-png\audio-white.png" />
+    <Content Include="themes\images\icons-png\back-black.png" />
+    <Content Include="themes\images\icons-png\back-white.png" />
+    <Content Include="themes\images\icons-png\bars-black.png" />
+    <Content Include="themes\images\icons-png\bars-white.png" />
+    <Content Include="themes\images\icons-png\bullets-black.png" />
+    <Content Include="themes\images\icons-png\bullets-white.png" />
+    <Content Include="themes\images\icons-png\calendar-black.png" />
+    <Content Include="themes\images\icons-png\calendar-white.png" />
+    <Content Include="themes\images\icons-png\camera-black.png" />
+    <Content Include="themes\images\icons-png\camera-white.png" />
+    <Content Include="themes\images\icons-png\carat-d-black.png" />
+    <Content Include="themes\images\icons-png\carat-d-white.png" />
+    <Content Include="themes\images\icons-png\carat-l-black.png" />
+    <Content Include="themes\images\icons-png\carat-l-white.png" />
+    <Content Include="themes\images\icons-png\carat-r-black.png" />
+    <Content Include="themes\images\icons-png\carat-r-white.png" />
+    <Content Include="themes\images\icons-png\carat-u-black.png" />
+    <Content Include="themes\images\icons-png\carat-u-white.png" />
+    <Content Include="themes\images\icons-png\check-black.png" />
+    <Content Include="themes\images\icons-png\check-white.png" />
+    <Content Include="themes\images\icons-png\clock-black.png" />
+    <Content Include="themes\images\icons-png\clock-white.png" />
+    <Content Include="themes\images\icons-png\cloud-black.png" />
+    <Content Include="themes\images\icons-png\cloud-white.png" />
+    <Content Include="themes\images\icons-png\comment-black.png" />
+    <Content Include="themes\images\icons-png\comment-white.png" />
+    <Content Include="themes\images\icons-png\delete-black.png" />
+    <Content Include="themes\images\icons-png\delete-white.png" />
+    <Content Include="themes\images\icons-png\edit-black.png" />
+    <Content Include="themes\images\icons-png\edit-white.png" />
+    <Content Include="themes\images\icons-png\eye-black.png" />
+    <Content Include="themes\images\icons-png\eye-white.png" />
+    <Content Include="themes\images\icons-png\forbidden-black.png" />
+    <Content Include="themes\images\icons-png\forbidden-white.png" />
+    <Content Include="themes\images\icons-png\forward-black.png" />
+    <Content Include="themes\images\icons-png\forward-white.png" />
+    <Content Include="themes\images\icons-png\gear-black.png" />
+    <Content Include="themes\images\icons-png\gear-white.png" />
+    <Content Include="themes\images\icons-png\grid-black.png" />
+    <Content Include="themes\images\icons-png\grid-white.png" />
+    <Content Include="themes\images\icons-png\heart-black.png" />
+    <Content Include="themes\images\icons-png\heart-white.png" />
+    <Content Include="themes\images\icons-png\home-black.png" />
+    <Content Include="themes\images\icons-png\home-white.png" />
+    <Content Include="themes\images\icons-png\info-black.png" />
+    <Content Include="themes\images\icons-png\info-white.png" />
+    <Content Include="themes\images\icons-png\location-black.png" />
+    <Content Include="themes\images\icons-png\location-white.png" />
+    <Content Include="themes\images\icons-png\lock-black.png" />
+    <Content Include="themes\images\icons-png\lock-white.png" />
+    <Content Include="themes\images\icons-png\mail-black.png" />
+    <Content Include="themes\images\icons-png\mail-white.png" />
+    <Content Include="themes\images\icons-png\minus-black.png" />
+    <Content Include="themes\images\icons-png\minus-white.png" />
+    <Content Include="themes\images\icons-png\navigation-black.png" />
+    <Content Include="themes\images\icons-png\navigation-white.png" />
+    <Content Include="themes\images\icons-png\phone-black.png" />
+    <Content Include="themes\images\icons-png\phone-white.png" />
+    <Content Include="themes\images\icons-png\plus-black.png" />
+    <Content Include="themes\images\icons-png\plus-white.png" />
+    <Content Include="themes\images\icons-png\power-black.png" />
+    <Content Include="themes\images\icons-png\power-white.png" />
+    <Content Include="themes\images\icons-png\recycle-black.png" />
+    <Content Include="themes\images\icons-png\recycle-white.png" />
+    <Content Include="themes\images\icons-png\refresh-black.png" />
+    <Content Include="themes\images\icons-png\refresh-white.png" />
+    <Content Include="themes\images\icons-png\search-black.png" />
+    <Content Include="themes\images\icons-png\search-white.png" />
+    <Content Include="themes\images\icons-png\shop-black.png" />
+    <Content Include="themes\images\icons-png\shop-white.png" />
+    <Content Include="themes\images\icons-png\star-black.png" />
+    <Content Include="themes\images\icons-png\star-white.png" />
+    <Content Include="themes\images\icons-png\tag-black.png" />
+    <Content Include="themes\images\icons-png\tag-white.png" />
+    <Content Include="themes\images\icons-png\user-black.png" />
+    <Content Include="themes\images\icons-png\user-white.png" />
+    <Content Include="themes\images\icons-png\video-black.png" />
+    <Content Include="themes\images\icons-png\video-white.png" />
+    <Content Include="themes\jquery.mobile.icons.min.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll.asmx.cs">
+      <DependentUpon>Payroll.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Payroll.Master.cs">
+      <DependentUpon>Payroll.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payroll.Master.designer.cs">
+      <DependentUpon>Payroll.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Penface.cs" />
+    <Compile Include="PenfaceMySQL.cs" />
+    <Compile Include="PenfaceOracle.cs" />
+    <Compile Include="ProcessXLS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="services\spreadsheet.ashx.cs">
+      <DependentUpon>spreadsheet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SQL.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Web References\PeopleSoft\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Payroll.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dist\jqm-icon-pack-fa.scss" />
+    <Content Include="services\spreadsheet.ashx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PeopleSoft\arrayList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PeopleSoft\FSSUEmployees.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PeopleSoft\PenfaceFinance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PeopleSoft\PeopleSoftService.wsdl" />
+    <None Include="Web References\PeopleSoft\PSObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PeopleSoft\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PeopleSoft\Status.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://owl1:8081/PeopleSoft/PeopleSoft%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PeopleSoft\</RelPath>
+      <UpdateFromURL>http://owl1:8081/PeopleSoft/PeopleSoft%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PSWebApp_PeopleSoft_PeopleSoftService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49607</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

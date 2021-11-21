@@ -1,0 +1,41 @@
+﻿body 
+{
+   
+}
+.textFont
+{
+     font-family:verdana;
+    font-size:10pt;
+    font-style:normal;
+}
+.btnReports 
+{
+            width:106px !important;
+            height:106px !important;
+            background:#EDEDED !important;
+            border:2px solid #000 !important;
+            border-radius:5px !important;
+            background: #EDEDED !important';
+            border: 2px solid #000 !important';
+            background-position: 'center';
+               
+}
+.btnReports_active 
+{
+    width:106px !important;
+            height:106px !important;
+            background:#EDEDED !important;
+            border:2px solid #000 !important;
+            border-radius:5px !important;
+            border: 2px solid #000 !important';
+            background-position: 'center';
+           
+}
+.activeColorClass 
+{
+    border: 2px solid #ffcc00;
+}
+.inActiveColorClass 
+{
+    border: 2px solid #000;
+}

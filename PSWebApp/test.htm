@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" type="text/javascript" /> 
+	  
+    
+    
+     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>-->
+	 
+	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+	 
+	 <link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+	 
+     <script type="text/javascript" src="Scripts/jquery.Jcrop.js"></script>
+	 <link rel="stylesheet" type="text/css" href="css/jquery.Jcrop.css"/>
+	 
+<script type="text/javascript">
+
+     $(function () {
+        
+		var dragging = false;
+	var iX, iY;
+	$("#lolcat").mousedown(function(e) {
+		dragging = true;
+		iX = e.clientX - this.offsetLeft;
+		iY = e.clientY - this.offsetTop;
+		this.setCapture && this.setCapture();
+		return false;
+	});
+	document.onmousemove = function(e) {
+		if (dragging) {
+			var e = e || window.event;
+			var oX = e.clientX - iX;
+			var oY = e.clientY - iY;
+			$("#lolcat").css({"left":oX + "px", "top":oY + "px"});
+			return false;
+		}
+	};
+	$(document).mouseup(function(e) {
+		dragging = false;
+		$("#lolcat")[0].releaseCapture();
+		e.cancelBubble = true;
+	})  
+	
+	function showCoords(c)
+    {
+      $('#x').val(c.x);
+	  $('#y').val(c.y);
+	  $('#w').val(c.w);
+	  $('#h').val(c.h);
+    }
+	function checkCoords()
+	{
+				if (parseInt($('#w').val())) return true;
+				alert('Please select a crop region then press submit.');
+				return false;
+	}
+	function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+	  /*$('#lolcat').Jcrop({
+            onSelect:    showCoords,
+            bgColor:     'black',
+            bgOpacity:   .4,
+            setSelect:   [ 100, 100, 50, 50 ],
+            aspectRatio: 16 / 9
+			
+			
+			[ 100, 100, 50, 50 ]
+        });*/
+		var x, y;
+		$('#content').onmousemove = function (e) {
+                if (dragging) {
+                    
+                    var e = e || window.event;
+                    var oX = e.clientX - iX;
+                    var oY = e.clientY - iY;
+                    
+					x = oX;
+					y = oY;
+					//$("#content").css({ "left": oX + "px", "top": oY + "px" });
+                    return false;
+                }
+        };
+		var iX, iY;
+        $("#content").mousedown(function (e) {
+
+                 dragging = true;
+                 iX = e.clientX - this.offsetLeft;
+                 iY = e.clientY - this.offsetTop;
+                
+
+                 return false;
+        });
+			 
+		function beginCrop(){
+		 
+		 
+		 $('#lolcat').Jcrop({
+		  onSelect : function(c){
+		     
+			  xCor = c.x;
+   		      yCor = c.y;
+		      hCor = c.h;
+		      wCor = c.w;
+			 
+			
+			 $('#x').val(c.x);
+			 $('#y').val(c.y);
+			 $('#h').val(c.h);
+			 $('#w').val(c.w);
+			 
+		   },
+		   bgColor:     'black',
+           bgOpacity:   .4,
+           //setSelect:   [x,y,150,500],
+           aspectRatio: 16 / 9 
+	     });
+		}
+		$("#cropImage").click(function () {
+		    beginCrop();
+		});
+ });
+</script>
+ <style type="text/css">
+   .centered-and-cropped { object-fit: cover }
+</style>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+
+
+  <div id="content" style="margin-top: 100px">
+  
+    <img id="lolcat" src="images/hsephoto1.jpg" style="position: absolute; width:800px;height:400px;" draggable="false" />
+	<br/></br/><br/></br/><br/></br/><br/></br/><br/></br/>
+	<button type="submit" id="cropImage" style="width:150px;height:40px;">Crop Image</button>
+	
+  </div>
+	
+	    <input type="hidden" id="w" name="w" value="279">
+		<input type="hidden" id="y" name="y" value="91">
+		<input type="hidden" id="h" name="h" value="279">
+		<input type="hidden" id="x" name="x" value="74">
+	
+  <img id="blah" class="crop" src="#" alt="your image" />
+  	
+</body>
+</html>

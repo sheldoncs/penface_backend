@@ -1,0 +1,12 @@
+C:\inetpub\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.dll
+C:\inetpub\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.pdb
+C:\inetpub\wwwroot\PSWebApp\PSWebApp\bin\MySql.Data.dll
+C:\inetpub\wwwroot\PSWebApp\PSWebApp\obj\Debug\PSWebApp.dll
+C:\inetpub\wwwroot\PSWebApp\PSWebApp\obj\Debug\PSWebApp.pdb
+C:\inetpub\wwwroot\PSWebApp\PSWebApp\obj\Debug\PSWebApp.csprojResolveAssemblyReference.cache
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.dll.config
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.dll
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.pdb
+C:\wwwroot\PSWebApp\PSWebApp\bin\MySql.Data.dll
+C:\wwwroot\PSWebApp\PSWebApp\obj\Debug\PSWebApp.dll
+C:\wwwroot\PSWebApp\PSWebApp\obj\Debug\PSWebApp.pdb

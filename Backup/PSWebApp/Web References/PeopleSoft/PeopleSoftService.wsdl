@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" xmlns:ns2="http://java.sun.com/jax-rpc-ri/internal" name="PeopleSoftService" targetNamespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://java.sun.com/jax-rpc-ri/internal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://java.sun.com/jax-rpc-ri/internal">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" />
+      <xsd:complexType name="arrayList">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns:list">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="list">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns:collection">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="collection">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soap11-enc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:anyType[]" ref="soap11-enc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://java.sun.com/jax-rpc-ri/internal" />
+      <xsd:complexType name="PSObject">
+        <xsd:sequence>
+          <xsd:element name="dedCur" type="xsd:double" />
+          <xsd:element name="status" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FSSUEmployees">
+        <xsd:sequence>
+          <xsd:element name="addlNBR" type="xsd:string" />
+          <xsd:element name="benefitPlan" type="xsd:string" />
+          <xsd:element name="dedClass" type="xsd:string" />
+          <xsd:element name="dedCur" type="xsd:string" />
+          <xsd:element name="emplid" type="xsd:string" />
+          <xsd:element name="employerCont" type="xsd:string" />
+          <xsd:element name="firstname" type="xsd:string" />
+          <xsd:element name="lastname" type="xsd:string" />
+          <xsd:element name="nationalID" type="xsd:string" />
+          <xsd:element name="payEndDt" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PenfaceFinance">
+        <xsd:sequence>
+          <xsd:element name="avcCont" type="xsd:string" />
+          <xsd:element name="emplid" type="xsd:string" />
+          <xsd:element name="employeeCont" type="xsd:string" />
+          <xsd:element name="employeeContOrig" type="xsd:string" />
+          <xsd:element name="employerCont" type="xsd:string" />
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="payEndDt" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Status">
+        <xsd:sequence>
+          <xsd:element name="id" type="xsd:string" />
+          <xsd:element name="status" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="PSRemoteInterface_confirmAVC">
+    <part name="String_1" type="xsd:string" />
+  </message>
+  <message name="PSRemoteInterface_confirmAVCResponse">
+    <part name="result" type="tns:PSObject" />
+  </message>
+  <message name="PSRemoteInterface_confirmAllAVC" />
+  <message name="PSRemoteInterface_confirmAllAVCResponse">
+    <part name="result" type="ns2:arrayList" />
+  </message>
+  <message name="PSRemoteInterface_getEmployee">
+    <part name="String_1" type="xsd:string" />
+  </message>
+  <message name="PSRemoteInterface_getEmployeeResponse">
+    <part name="result" type="tns:FSSUEmployees" />
+  </message>
+  <message name="PSRemoteInterface_getFSSUEmployees">
+    <part name="String_1" type="xsd:string" />
+  </message>
+  <message name="PSRemoteInterface_getFSSUEmployeesResponse">
+    <part name="result" type="ns2:arrayList" />
+  </message>
+  <message name="PSRemoteInterface_getFSSUEmployees2">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+  </message>
+  <message name="PSRemoteInterface_getFSSUEmployees2Response">
+    <part name="result" type="tns:PSObject" />
+  </message>
+  <message name="PSRemoteInterface_getPenfaceEmployees">
+    <part name="String_1" type="xsd:string" />
+  </message>
+  <message name="PSRemoteInterface_getPenfaceEmployeesResponse">
+    <part name="result" type="ns2:arrayList" />
+  </message>
+  <message name="PSRemoteInterface_getPenfaceFnance" />
+  <message name="PSRemoteInterface_getPenfaceFnanceResponse">
+    <part name="result" type="tns:PenfaceFinance" />
+  </message>
+  <message name="PSRemoteInterface_getStatus" />
+  <message name="PSRemoteInterface_getStatusResponse">
+    <part name="result" type="tns:Status" />
+  </message>
+  <portType name="PSRemoteInterface">
+    <operation name="confirmAVC" parameterOrder="String_1">
+      <input message="tns:PSRemoteInterface_confirmAVC" />
+      <output message="tns:PSRemoteInterface_confirmAVCResponse" />
+    </operation>
+    <operation name="confirmAllAVC">
+      <input message="tns:PSRemoteInterface_confirmAllAVC" />
+      <output message="tns:PSRemoteInterface_confirmAllAVCResponse" />
+    </operation>
+    <operation name="getEmployee" parameterOrder="String_1">
+      <input message="tns:PSRemoteInterface_getEmployee" />
+      <output message="tns:PSRemoteInterface_getEmployeeResponse" />
+    </operation>
+    <operation name="getFSSUEmployees" parameterOrder="String_1">
+      <input message="tns:PSRemoteInterface_getFSSUEmployees" />
+      <output message="tns:PSRemoteInterface_getFSSUEmployeesResponse" />
+    </operation>
+    <operation name="getFSSUEmployees2" parameterOrder="String_1 String_2">
+      <input message="tns:PSRemoteInterface_getFSSUEmployees2" />
+      <output message="tns:PSRemoteInterface_getFSSUEmployees2Response" />
+    </operation>
+    <operation name="getPenfaceEmployees" parameterOrder="String_1">
+      <input message="tns:PSRemoteInterface_getPenfaceEmployees" />
+      <output message="tns:PSRemoteInterface_getPenfaceEmployeesResponse" />
+    </operation>
+    <operation name="getPenfaceFnance">
+      <input message="tns:PSRemoteInterface_getPenfaceFnance" />
+      <output message="tns:PSRemoteInterface_getPenfaceFnanceResponse" />
+    </operation>
+    <operation name="getStatus">
+      <input message="tns:PSRemoteInterface_getStatus" />
+      <output message="tns:PSRemoteInterface_getStatusResponse" />
+    </operation>
+  </portType>
+  <binding name="PSRemoteInterfaceBinding" type="tns:PSRemoteInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="confirmAVC">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="confirmAllAVC">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getFSSUEmployees">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getFSSUEmployees2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getPenfaceEmployees">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getPenfaceFnance">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="getStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost:8080/PeopelSoft/PeopelSoft?WSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PeopleSoftService">
+    <port name="PSRemoteInterfacePort" binding="tns:PSRemoteInterfaceBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL" />
+    </port>
+  </service>
+</definitions>

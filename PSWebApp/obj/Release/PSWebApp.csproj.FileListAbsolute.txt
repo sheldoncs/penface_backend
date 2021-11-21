@@ -1,0 +1,9 @@
+C:\wwwroot\PSWebApp\PSWebApp\obj\Release\PSWebApp.dll
+C:\wwwroot\PSWebApp\PSWebApp\obj\Release\PSWebApp.pdb
+C:\wwwroot\PSWebApp\PSWebApp\obj\Release\PSWebApp.csprojResolveAssemblyReference.cache
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.dll.config
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.dll
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.XmlSerializers.dll
+C:\wwwroot\PSWebApp\PSWebApp\bin\PSWebApp.pdb
+C:\wwwroot\PSWebApp\PSWebApp\bin\MySql.Data.dll
+C:\wwwroot\PSWebApp\PSWebApp\obj\Release\PSWebApp.XmlSerializers.dll

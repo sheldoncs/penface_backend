@@ -1,0 +1,91 @@
+﻿
+.ui-icon-myapp-setup {
+	background: url("../images/menu-icons/setitup.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-search {
+	background: url("../images/menu-icons/search.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-adjust {
+	background: url("../images/menu-icons/adjust.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-reports {
+	background: url("../images/menu-icons/reports.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-mail {
+	background: url("../images/menu-icons/mail.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-bolt {
+	background: url("../images/menu-icons/bolt.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-unassigned {
+	background: url("../images/menu-icons/unassignedStudent.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-advisor {
+	background: url("../images/menu-icons/studentAdvisor.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-confirm {
+	background: url("../images/menu-icons/confirm.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-remove {
+	background: url("../images/menu-icons/remove.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-viewreport {
+	background: url("../images/menu-icons/viewReport.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-start {
+	background: url("../images/menu-icons/start.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-assignment {
+	background: url("../images/menu-icons/assignment.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-addadvisor {
+	background: url("../images/menu-icons/add_advisor.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-maillist {
+	background: url("../images/menu-icons/maillist.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-addemail {
+	background: url("../images/menu-icons/addemail.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-previous {
+	background: url("../images/menu-icons/previous.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}
+.ui-icon-myapp-next {
+	background: url("../images/menu-icons/next.png") no-repeat #F0CB37 !important;
+	color:#000;
+    /*rgba(0, 0, 0, 0.4)*/
+}

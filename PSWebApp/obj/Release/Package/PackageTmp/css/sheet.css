@@ -1,0 +1,19 @@
+﻿
+.btnReports 
+{
+            width:106px !important;
+            height:106px !important;
+            border:2px solid #000 !important;
+            border-radius:5px !important;
+            top:150px !important;
+}
+.btnReports_active 
+{
+            width:106px !important;
+            height:106px !important;
+            background:#ED514C !important;
+            border:2px solid #000 !important;
+            border-radius:5px !important;
+            top:150px !important;
+}
+        
